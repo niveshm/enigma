@@ -42,3 +42,12 @@ jobs:
           target: web
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Build and push for linux/386
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          platforms: linux/386
+          target: web
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
