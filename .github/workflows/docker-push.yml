@@ -20,9 +20,6 @@ jobs:
         with:
           images: |
             niveshm/enigma
-          tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
       - name: check info
         shell: bash
         run: |
